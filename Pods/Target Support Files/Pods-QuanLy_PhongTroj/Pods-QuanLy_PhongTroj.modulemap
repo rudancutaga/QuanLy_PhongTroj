@@ -1,0 +1,6 @@
+framework module Pods_QuanLy_PhongTroj {
+  umbrella header "Pods-QuanLy_PhongTroj-umbrella.h"
+
+  export *
+  module * { export * }
+}

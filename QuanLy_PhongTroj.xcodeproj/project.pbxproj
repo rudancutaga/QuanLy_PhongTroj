@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5ECC5D82EFD35DD86A9473AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8257B56FA271ED666D577B /* GoogleService-Info.plist */; };
+		D290870A318417FD7E961DFB /* Pods_QuanLy_PhongTroj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF642F8A5E0C4FC973806FEF /* Pods_QuanLy_PhongTroj.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0490DE262A1394935FCD2A40 /* Pods-QuanLy_PhongTroj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanLy_PhongTroj.debug.xcconfig"; path = "Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj.debug.xcconfig"; sourceTree = "<group>"; };
 		04E230F32F6A9CC200AAC3AD /* QuanLy_PhongTroj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuanLy_PhongTroj.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D89D90BF07783855C24D3A0 /* Pods-QuanLy_PhongTroj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanLy_PhongTroj.release.xcconfig"; path = "Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj.release.xcconfig"; sourceTree = "<group>"; };
+		AA8257B56FA271ED666D577B /* GoogleService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "QuanLy_PhongTroj/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF642F8A5E0C4FC973806FEF /* Pods_QuanLy_PhongTroj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuanLy_PhongTroj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D290870A318417FD7E961DFB /* Pods_QuanLy_PhongTroj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +57,9 @@
 			children = (
 				04E230F52F6A9CC200AAC3AD /* QuanLy_PhongTroj */,
 				04E230F42F6A9CC200AAC3AD /* Products */,
+				89E94654D59CC48743F6CD83 /* Pods */,
+				5D89A2F6D4E3FD741CDEC739 /* Frameworks */,
+				AA8257B56FA271ED666D577B /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +71,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5D89A2F6D4E3FD741CDEC739 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF642F8A5E0C4FC973806FEF /* Pods_QuanLy_PhongTroj.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89E94654D59CC48743F6CD83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0490DE262A1394935FCD2A40 /* Pods-QuanLy_PhongTroj.debug.xcconfig */,
+				6D89D90BF07783855C24D3A0 /* Pods-QuanLy_PhongTroj.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04E231062F6A9CC300AAC3AD /* Build configuration list for PBXNativeTarget "QuanLy_PhongTroj" */;
 			buildPhases = (
+				FAD0F7F294C888996CE69CF0 /* [CP] Check Pods Manifest.lock */,
 				04E230EF2F6A9CC200AAC3AD /* Sources */,
 				04E230F02F6A9CC200AAC3AD /* Frameworks */,
 				04E230F12F6A9CC200AAC3AD /* Resources */,
+				6DF06E74BEFEC6DD9A59F961 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +109,6 @@
 				04E230F52F6A9CC200AAC3AD /* QuanLy_PhongTroj */,
 			);
 			name = QuanLy_PhongTroj;
-			packageProductDependencies = (
-			);
 			productName = QuanLy_PhongTroj;
 			productReference = 04E230F32F6A9CC200AAC3AD /* QuanLy_PhongTroj.app */;
 			productType = "com.apple.product-type.application";
@@ -122,10 +152,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECC5D82EFD35DD86A9473AA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DF06E74BEFEC6DD9A59F961 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAD0F7F294C888996CE69CF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuanLy_PhongTroj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04E230EF2F6A9CC200AAC3AD /* Sources */ = {
@@ -140,6 +217,7 @@
 /* Begin XCBuildConfiguration section */
 		04E231072F6A9CC300AAC3AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0490DE262A1394935FCD2A40 /* Pods-QuanLy_PhongTroj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -171,6 +249,7 @@
 		};
 		04E231082F6A9CC300AAC3AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D89D90BF07783855C24D3A0 /* Pods-QuanLy_PhongTroj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -237,7 +316,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -300,7 +379,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
