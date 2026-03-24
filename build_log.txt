@@ -1,0 +1,290 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -workspace /Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/QuanLy_PhongTroj.xcworkspace -scheme QuanLy_PhongTroj clean build
+
+2026-03-24 11:39:20.767 xcodebuild[93625:1510062] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00006000-000819E10C06801E, name:My Mac }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, arch:arm64, id:16F4147E-B396-40B4-BBCF-0B66907B408F, OS:26.2, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:84FDFCB6-0EAF-447E-BFE7-F7F7CEEBC4AB, OS:26.2, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:93603ED3-6207-4158-8748-0D94804BA289, OS:26.2, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:22CBC140-2859-4341-9121-028B0531699C, OS:26.2, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:E8F12F1D-F6CE-4380-9EB5-454D5D40D860, OS:26.2, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:201CF93E-4DE2-4DAF-AB63-DD346C1EB88F, OS:26.2, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:FCD3F8E7-7952-47CA-9443-BCA0114C495A, OS:26.2, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:17CAB105-F8AA-4496-B3EE-EA83BA62468E, OS:26.2, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:8A564814-65DB-41C2-A593-3B55EF6A4399, OS:26.2, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:45D866DB-17AD-437A-B933-3C8AF9ED3102, OS:26.2, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:B037A0E6-5499-41D5-95D4-C57F2D6D1445, OS:26.2, name:iPhone Air }
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+** CLEAN SUCCEEDED **
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00006000-000819E10C06801E, name:My Mac }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, arch:arm64, id:16F4147E-B396-40B4-BBCF-0B66907B408F, OS:26.2, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:84FDFCB6-0EAF-447E-BFE7-F7F7CEEBC4AB, OS:26.2, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:93603ED3-6207-4158-8748-0D94804BA289, OS:26.2, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:22CBC140-2859-4341-9121-028B0531699C, OS:26.2, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:E8F12F1D-F6CE-4380-9EB5-454D5D40D860, OS:26.2, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:201CF93E-4DE2-4DAF-AB63-DD346C1EB88F, OS:26.2, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:FCD3F8E7-7952-47CA-9443-BCA0114C495A, OS:26.2, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:17CAB105-F8AA-4496-B3EE-EA83BA62468E, OS:26.2, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:8A564814-65DB-41C2-A593-3B55EF6A4399, OS:26.2, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:45D866DB-17AD-437A-B933-3C8AF9ED3102, OS:26.2, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:B037A0E6-5499-41D5-95D4-C57F2D6D1445, OS:26.2, name:iPhone Air }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (43 targets)
+    Target 'QuanLy_PhongTroj' in project 'QuanLy_PhongTroj'
+        ➜ Implicit dependency on target 'Pods-QuanLy_PhongTroj' in project 'Pods' via file 'Pods_QuanLy_PhongTroj.framework' in build phase 'Link Binary'
+        ➜ Implicit dependency on target 'PromisesObjC' in project 'Pods' via options '-framework FBLPromises' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseAppCheckInterop' in project 'Pods' via options '-framework FirebaseAppCheckInterop' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseAuth' in project 'Pods' via options '-framework FirebaseAuth' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseAuthInterop' in project 'Pods' via options '-framework FirebaseAuthInterop' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCore' in project 'Pods' via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCoreExtension' in project 'Pods' via options '-framework FirebaseCoreExtension' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCoreInternal' in project 'Pods' via options '-framework FirebaseCoreInternal' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseFirestore' in project 'Pods' via options '-framework FirebaseFirestore' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseFirestoreInternal' in project 'Pods' via options '-framework FirebaseFirestoreInternal' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseInstallations' in project 'Pods' via options '-framework FirebaseInstallations' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseSharedSwift' in project 'Pods' via options '-framework FirebaseSharedSwift' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'GTMSessionFetcher' in project 'Pods' via options '-framework GTMSessionFetcher' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'GoogleUtilities' in project 'Pods' via options '-framework GoogleUtilities' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'RecaptchaInterop' in project 'Pods' via options '-framework RecaptchaInterop' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'abseil' in project 'Pods' via options '-framework absl' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'gRPC-Core' in project 'Pods' via options '-framework grpc' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'gRPC-C++' in project 'Pods' via options '-framework grpcpp' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'leveldb-library' in project 'Pods' via options '-framework leveldb' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'nanopb' in project 'Pods' via options '-framework nanopb' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'BoringSSL-GRPC' in project 'Pods' via options '-framework openssl_grpc' in build setting 'OTHER_LDFLAGS'
+    Target 'Pods-QuanLy_PhongTroj' in project 'Pods'
+        ➜ Explicit dependency on target 'BoringSSL-GRPC' in project 'Pods'
+        ➜ Explicit dependency on target 'Firebase' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAnalytics' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAppCheckInterop' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAuth' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAuthInterop' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCoreExtension' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCoreInternal' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseFirestore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseFirestoreInternal' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseInstallations' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseSharedSwift' in project 'Pods'
+        ➜ Explicit dependency on target 'GTMSessionFetcher' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleAdsOnDeviceConversion' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleAppMeasurement' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+        ➜ Explicit dependency on target 'PromisesObjC' in project 'Pods'
+        ➜ Explicit dependency on target 'RecaptchaInterop' in project 'Pods'
+        ➜ Explicit dependency on target 'abseil' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-C++' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-Core' in project 'Pods'
+        ➜ Explicit dependency on target 'leveldb-library' in project 'Pods'
+        ➜ Explicit dependency on target 'nanopb' in project 'Pods'
+    Target 'Firebase' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAnalytics' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAuth' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseFirestore' in project 'Pods'
+        ➜ Implicit dependency on target 'FirebaseFirestoreInternal' in project 'Pods' via options '-weak_framework FirebaseFirestoreInternal' in build setting 'OTHER_LDFLAGS'
+    Target 'FirebaseFirestore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCoreExtension' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseFirestore-FirebaseFirestore_Privacy' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseFirestoreInternal' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseSharedSwift' in project 'Pods'
+    Target 'FirebaseFirestore-FirebaseFirestore_Privacy' in project 'Pods'
+        ➜ Implicit dependency on target 'FirebaseCore' in project 'Pods' via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCoreExtension' in project 'Pods' via options '-framework FirebaseCoreExtension' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseFirestoreInternal' in project 'Pods' via options '-framework FirebaseFirestoreInternal' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseSharedSwift' in project 'Pods' via options '-framework FirebaseSharedSwift' in build setting 'OTHER_LDFLAGS'
+    Target 'FirebaseSharedSwift' in project 'Pods' (no dependencies)
+    Target 'FirebaseFirestoreInternal' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAppCheckInterop' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseFirestoreInternal-FirebaseFirestoreInternal_Privacy' in project 'Pods'
+        ➜ Explicit dependency on target 'abseil' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-C++' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-Core' in project 'Pods'
+        ➜ Explicit dependency on target 'leveldb-library' in project 'Pods'
+        ➜ Explicit dependency on target 'nanopb' in project 'Pods'
+    Target 'FirebaseFirestoreInternal-FirebaseFirestoreInternal_Privacy' in project 'Pods'
+        ➜ Implicit dependency on target 'FirebaseAppCheckInterop' in project 'Pods' via options '-framework FirebaseAppCheckInterop' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCore' in project 'Pods' via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'abseil' in project 'Pods' via options '-framework absl' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'gRPC-Core' in project 'Pods' via options '-framework grpc' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'gRPC-C++' in project 'Pods' via options '-framework grpcpp' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'leveldb-library' in project 'Pods' via options '-framework leveldb' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'nanopb' in project 'Pods' via options '-framework nanopb' in build setting 'OTHER_LDFLAGS'
+    Target 'leveldb-library' in project 'Pods'
+        ➜ Explicit dependency on target 'leveldb-library-leveldb_Privacy' in project 'Pods'
+    Target 'leveldb-library-leveldb_Privacy' in project 'Pods' (no dependencies)
+    Target 'gRPC-C++' in project 'Pods'
+        ➜ Explicit dependency on target 'abseil' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-C++-gRPCCertificates-Cpp' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-C++-grpcpp' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-Core' in project 'Pods'
+    Target 'gRPC-C++-grpcpp' in project 'Pods'
+        ➜ Implicit dependency on target 'abseil' in project 'Pods' via options '-framework absl' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'gRPC-Core' in project 'Pods' via options '-framework grpc' in build setting 'OTHER_LDFLAGS'
+    Target 'gRPC-C++-gRPCCertificates-Cpp' in project 'Pods'
+        ➜ Implicit dependency on target 'abseil' in project 'Pods' via options '-framework absl' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'gRPC-Core' in project 'Pods' via options '-framework grpc' in build setting 'OTHER_LDFLAGS'
+    Target 'gRPC-Core' in project 'Pods'
+        ➜ Explicit dependency on target 'BoringSSL-GRPC' in project 'Pods'
+        ➜ Explicit dependency on target 'abseil' in project 'Pods'
+        ➜ Explicit dependency on target 'gRPC-Core-grpc' in project 'Pods'
+    Target 'gRPC-Core-grpc' in project 'Pods'
+        ➜ Implicit dependency on target 'abseil' in project 'Pods' via options '-framework absl' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'BoringSSL-GRPC' in project 'Pods' via options '-framework openssl_grpc' in build setting 'OTHER_LDFLAGS'
+    Target 'abseil' in project 'Pods'
+        ➜ Explicit dependency on target 'abseil-xcprivacy' in project 'Pods'
+    Target 'abseil-xcprivacy' in project 'Pods' (no dependencies)
+    Target 'FirebaseAuth' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAppCheckInterop' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAuth-FirebaseAuth_Privacy' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseAuthInterop' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCoreExtension' in project 'Pods'
+        ➜ Explicit dependency on target 'GTMSessionFetcher' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+        ➜ Explicit dependency on target 'RecaptchaInterop' in project 'Pods'
+    Target 'FirebaseAuth-FirebaseAuth_Privacy' in project 'Pods'
+        ➜ Implicit dependency on target 'FirebaseAppCheckInterop' in project 'Pods' via options '-framework FirebaseAppCheckInterop' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseAuthInterop' in project 'Pods' via options '-framework FirebaseAuthInterop' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCore' in project 'Pods' via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCoreExtension' in project 'Pods' via options '-framework FirebaseCoreExtension' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'GTMSessionFetcher' in project 'Pods' via options '-framework GTMSessionFetcher' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'GoogleUtilities' in project 'Pods' via options '-framework GoogleUtilities' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'RecaptchaInterop' in project 'Pods' via options '-framework RecaptchaInterop' in build setting 'OTHER_LDFLAGS'
+    Target 'RecaptchaInterop' in project 'Pods' (no dependencies)
+    Target 'GTMSessionFetcher' in project 'Pods'
+        ➜ Explicit dependency on target 'GTMSessionFetcher-GTMSessionFetcher_Core_Privacy' in project 'Pods'
+    Target 'GTMSessionFetcher-GTMSessionFetcher_Core_Privacy' in project 'Pods' (no dependencies)
+    Target 'FirebaseCoreExtension' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCoreExtension-FirebaseCoreExtension_Privacy' in project 'Pods'
+    Target 'FirebaseCoreExtension-FirebaseCoreExtension_Privacy' in project 'Pods'
+        ➜ Implicit dependency on target 'FirebaseCore' in project 'Pods' via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS'
+    Target 'FirebaseAuthInterop' in project 'Pods' (no dependencies)
+    Target 'FirebaseAppCheckInterop' in project 'Pods' (no dependencies)
+    Target 'FirebaseAnalytics' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseInstallations' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleAppMeasurement' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+        ➜ Explicit dependency on target 'nanopb' in project 'Pods'
+    Target 'GoogleAppMeasurement' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleAdsOnDeviceConversion' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+        ➜ Explicit dependency on target 'nanopb' in project 'Pods'
+    Target 'GoogleAdsOnDeviceConversion' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+        ➜ Explicit dependency on target 'nanopb' in project 'Pods'
+    Target 'nanopb' in project 'Pods'
+        ➜ Explicit dependency on target 'nanopb-nanopb_Privacy' in project 'Pods'
+    Target 'nanopb-nanopb_Privacy' in project 'Pods' (no dependencies)
+    Target 'FirebaseInstallations' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseInstallations-FirebaseInstallations_Privacy' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+        ➜ Explicit dependency on target 'PromisesObjC' in project 'Pods'
+    Target 'FirebaseInstallations-FirebaseInstallations_Privacy' in project 'Pods'
+        ➜ Implicit dependency on target 'PromisesObjC' in project 'Pods' via options '-framework FBLPromises' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'FirebaseCore' in project 'Pods' via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'GoogleUtilities' in project 'Pods' via options '-framework GoogleUtilities' in build setting 'OTHER_LDFLAGS'
+    Target 'PromisesObjC' in project 'Pods'
+        ➜ Explicit dependency on target 'PromisesObjC-FBLPromises_Privacy' in project 'Pods'
+    Target 'PromisesObjC-FBLPromises_Privacy' in project 'Pods' (no dependencies)
+    Target 'FirebaseCore' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCore-FirebaseCore_Privacy' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCoreInternal' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+    Target 'FirebaseCore-FirebaseCore_Privacy' in project 'Pods'
+        ➜ Implicit dependency on target 'FirebaseCoreInternal' in project 'Pods' via options '-framework FirebaseCoreInternal' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'GoogleUtilities' in project 'Pods' via options '-framework GoogleUtilities' in build setting 'OTHER_LDFLAGS'
+    Target 'FirebaseCoreInternal' in project 'Pods'
+        ➜ Explicit dependency on target 'FirebaseCoreInternal-FirebaseCoreInternal_Privacy' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities' in project 'Pods'
+    Target 'FirebaseCoreInternal-FirebaseCoreInternal_Privacy' in project 'Pods'
+        ➜ Implicit dependency on target 'GoogleUtilities' in project 'Pods' via options '-framework GoogleUtilities' in build setting 'OTHER_LDFLAGS'
+    Target 'GoogleUtilities' in project 'Pods'
+        ➜ Explicit dependency on target 'GoogleUtilities-GoogleUtilities_Privacy' in project 'Pods'
+    Target 'GoogleUtilities-GoogleUtilities_Privacy' in project 'Pods' (no dependencies)
+    Target 'BoringSSL-GRPC' in project 'Pods'
+        ➜ Explicit dependency on target 'BoringSSL-GRPC-openssl_grpc' in project 'Pods'
+    Target 'BoringSSL-GRPC-openssl_grpc' in project 'Pods' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c++ -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/QuanLy_PhongTroj/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -V
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x objective-c++ -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+Build description signature: 627201c1093143cbdaecc6c5396a7595
+Build description path: /Users/mac/Library/Developer/Xcode/DerivedData/QuanLy_PhongTroj-aoxdhulzoqypekaoryagbxmfzkso/Build/Intermediates.noindex/XCBuildData/627201c1093143cbdaecc6c5396a7595.xcbuilddata
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'abseil' from project 'Pods')
+warning: Run script build phase 'Create Symlinks to Header Folders' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'abseil' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RecaptchaInterop' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'leveldb-library' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'gRPC-Core' from project 'Pods')
+warning: Run script build phase 'Create Symlinks to Header Folders' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'gRPC-Core' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'abseil-xcprivacy' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/QuanLy_PhongTroj.xcodeproj: error: Signing for "QuanLy_PhongTroj" requires a development team. Select a development team in the Signing & Capabilities editor. (in target 'QuanLy_PhongTroj' from project 'QuanLy_PhongTroj')
+warning: Skipping duplicate build file in Copy Bundle Resources build phase: /Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/QuanLy_PhongTroj/GoogleService-Info.plist (in target 'QuanLy_PhongTroj' from project 'QuanLy_PhongTroj')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'gRPC-C++' from project 'Pods')
+warning: Run script build phase 'Create Symlinks to Header Folders' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'gRPC-C++' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'PromisesObjC-FBLPromises_Privacy' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'gRPC-C++-gRPCCertificates-Cpp' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'PromisesObjC' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'leveldb-library-leveldb_Privacy' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'BoringSSL-GRPC' from project 'Pods')
+warning: Run script build phase 'Create Symlinks to Header Folders' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'BoringSSL-GRPC' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'gRPC-Core-grpc' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'BoringSSL-GRPC-openssl_grpc' from project 'Pods')
+/Users/mac/Desktop/projectMB/QuanLy_PhongTroj-main/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'gRPC-C++-grpcpp' from project 'Pods')
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Building workspace QuanLy_PhongTroj with scheme QuanLy_PhongTroj
+(1 failure)
