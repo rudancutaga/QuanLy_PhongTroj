@@ -7,7 +7,11 @@
 		<key>QuanLy_PhongTroj.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>43</integer>
+=======
+			<integer>42</integer>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 		</dict>
 	</dict>
 </dict>

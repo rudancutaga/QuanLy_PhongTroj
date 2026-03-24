@@ -3518,6 +3518,7 @@ FirestoreEncoder
    limitations under the License.
 </string>
 			<key>License</key>
+<<<<<<< HEAD
 			<string>Apache-2.0</string>
 			<key>Title</key>
 			<string>FirebaseStorage</string>
@@ -3730,6 +3731,8 @@ FirestoreEncoder
    limitations under the License.
 </string>
 			<key>License</key>
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 			<string>Apache</string>
 			<key>Title</key>
 			<string>GTMSessionFetcher</string>

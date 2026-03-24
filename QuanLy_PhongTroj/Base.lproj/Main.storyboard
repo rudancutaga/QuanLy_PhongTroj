@@ -146,10 +146,17 @@
             </objects>
             <point key="canvasLocation" x="900" y="37"/>
         </scene>
+<<<<<<< HEAD
         <!--Main Tab Bar Controller-->
         <scene sceneID="tab-bar-scene">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarController" id="Tab-Bar-001" customClass="MainTabBarController" customModule="QuanLy_PhongTroj" customModuleProvider="target" sceneMemberID="viewController">
+=======
+        <!--Tab Bar Controller-->
+        <scene sceneID="tab-bar-scene">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="Tab-Bar-001" sceneMemberID="viewController">
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tab-Bar-View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -187,6 +194,7 @@
         <!--Đã lưu-->
         <scene sceneID="saved-vc-scene">
             <objects>
+<<<<<<< HEAD
                 <viewController id="Saved-VC-001" customClass="YeuThichVC" customModule="QuanLy_PhongTroj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Saved-View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -258,6 +266,16 @@
                         <outlet property="headerLabel" destination="Saved-Header-Lbl" id="Saved-Out-Header"/>
                         <outlet property="tableView" destination="Saved-TV" id="Saved-Out-TV"/>
                     </connections>
+=======
+                <viewController id="Saved-VC-001" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Saved-View">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Saved-Safe"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Đã lưu" image="heart" catalog="system" selectedImage="heart.fill" id="Tab-Item-Saved"/>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Saved-VC-Resp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,6 +284,7 @@
         <!--Tin nhắn-->
         <scene sceneID="msg-vc-scene">
             <objects>
+<<<<<<< HEAD
                 <viewController id="Msg-VC-001" customClass="TinNhanVC" customModule="QuanLy_PhongTroj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Msg-View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -337,6 +356,16 @@
                         <outlet property="headerLabel" destination="Msg-Header-Lbl" id="Msg-Out-Header"/>
                         <outlet property="tableView" destination="Msg-TV" id="Msg-Out-TV"/>
                     </connections>
+=======
+                <viewController id="Msg-VC-001" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Msg-View">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Msg-Safe"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tin nhắn" image="message" catalog="system" selectedImage="message.fill" id="Tab-Item-Msg"/>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msg-VC-Resp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -345,6 +374,7 @@
         <!--Tài khoản-->
         <scene sceneID="acc-vc-scene">
             <objects>
+<<<<<<< HEAD
                 <viewController id="Acc-VC-001" customClass="TaiKhoanVC" customModule="QuanLy_PhongTroj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Acc-View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -495,6 +525,16 @@
                         <outlet property="nameLabel" destination="Acc-Name-Lbl" id="Acc-Out-Name"/>
                         <outlet property="roleLabel" destination="Acc-Role-Lbl" id="Acc-Out-Role"/>
                     </connections>
+=======
+                <viewController id="Acc-VC-001" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Acc-View">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Acc-Safe"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tài khoản" image="person" catalog="system" selectedImage="person.fill" id="Tab-Item-Acc"/>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acc-VC-Resp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -818,7 +858,10 @@
                         <outlet property="cat3Btn" destination="Cat3-Btn" id="Out-Cat3-Btn"/>
                         <outlet property="cat4Btn" destination="Cat4-Btn" id="Out-Cat4-Btn"/>
                         <outlet property="scrollView" destination="Home-Scroll" id="Out-Scroll"/>
+<<<<<<< HEAD
                         <outlet property="searchTextField" destination="Search-TF" id="Out-Search-TF"/>
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                         <outlet property="xemTatCaButton" destination="Room-Btn-1" id="Out-XemTatCa"/>
                         <segue destination="DSP-VC-001" kind="show" identifier="showDanhSachPhong" id="Seg-DSP-001"/>
                     </connections>
@@ -942,6 +985,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="sc-content"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="sc-frame"/>
                             </scrollView>
+<<<<<<< HEAD
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Bottom-Stack">
                                 <rect key="frame" x="16" y="764" width="361" height="60"/>
                                 <subviews>
@@ -988,6 +1032,28 @@
                                     <constraint firstAttribute="height" constant="60" id="Stack-H"/>
                                 </constraints>
                             </stackView>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btn-LienHe">
+                                <rect key="frame" x="16" y="704" width="361" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Btn-H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="📞 Liên Hệ Chủ Nhà">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnLienHeTapped:" destination="ChiTietPhongVC-ID" eventType="touchUpInside" id="Conn-Btn"/>
+                                </connections>
+                            </button>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ChiTiet-SafeArea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -995,10 +1061,17 @@
                             <constraint firstItem="Scroll-ChiTiet" firstAttribute="top" secondItem="ChiTiet-SafeArea" secondAttribute="top" id="v-1"/>
                             <constraint firstItem="Scroll-ChiTiet" firstAttribute="leading" secondItem="ChiTiet-SafeArea" secondAttribute="leading" id="v-2"/>
                             <constraint firstItem="Scroll-ChiTiet" firstAttribute="trailing" secondItem="ChiTiet-SafeArea" secondAttribute="trailing" id="v-3"/>
+<<<<<<< HEAD
                             <constraint firstItem="Bottom-Stack" firstAttribute="top" secondItem="Scroll-ChiTiet" secondAttribute="bottom" constant="20" id="v-4"/>
                             <constraint firstItem="Bottom-Stack" firstAttribute="leading" secondItem="ChiTiet-SafeArea" secondAttribute="leading" constant="16" id="v-5"/>
                             <constraint firstItem="ChiTiet-SafeArea" firstAttribute="trailing" secondItem="Bottom-Stack" secondAttribute="trailing" constant="16" id="v-6"/>
                             <constraint firstItem="ChiTiet-SafeArea" firstAttribute="bottom" secondItem="Bottom-Stack" secondAttribute="bottom" constant="20" id="v-7"/>
+=======
+                            <constraint firstItem="Btn-LienHe" firstAttribute="top" secondItem="Scroll-ChiTiet" secondAttribute="bottom" constant="20" id="v-4"/>
+                            <constraint firstItem="Btn-LienHe" firstAttribute="leading" secondItem="ChiTiet-SafeArea" secondAttribute="leading" constant="16" id="v-5"/>
+                            <constraint firstItem="ChiTiet-SafeArea" firstAttribute="trailing" secondItem="Btn-LienHe" secondAttribute="trailing" constant="16" id="v-6"/>
+                            <constraint firstItem="ChiTiet-SafeArea" firstAttribute="bottom" secondItem="Btn-LienHe" secondAttribute="bottom" constant="20" id="v-7"/>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                         </constraints>
                     </view>
                     <connections>
@@ -1043,6 +1116,7 @@
                     <view key="view" contentMode="scaleToFill" id="Admin-Dash-View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Dash-Stack">
                                 <rect key="frame" x="16" y="323.66666666666669" width="361" height="125"/>
@@ -1082,6 +1156,12 @@
                         <outlet property="roomsCountLabel" destination="Dash-Rooms-Lbl" id="Dash-Out-Rooms"/>
                         <outlet property="usersCountLabel" destination="Dash-Users-Lbl" id="Dash-Out-Users"/>
                     </connections>
+=======
+                        <viewLayoutGuide key="safeArea" id="Admin-Dash-Safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tổng quan" image="chart.bar" catalog="system" selectedImage="chart.bar.fill" id="Admin-Tab-Item-1b"/>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Admin-Dash-Resp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1094,6 +1174,7 @@
                     <view key="view" contentMode="scaleToFill" id="Admin-Phong-View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AdminPhong-TV">
                                 <rect key="frame" x="0.0" y="118" width="393" height="734"/>
@@ -1119,6 +1200,12 @@
                     <connections>
                         <outlet property="tableView" destination="AdminPhong-TV" id="AP-Out-TV"/>
                     </connections>
+=======
+                        <viewLayoutGuide key="safeArea" id="Admin-Phong-Safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QL Phòng" image="building.2" catalog="system" selectedImage="building.2.fill" id="Admin-Tab-Item-2b"/>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Admin-Phong-Resp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1131,6 +1218,7 @@
                     <view key="view" contentMode="scaleToFill" id="Admin-User-View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AdminUser-TV">
                                 <rect key="frame" x="0.0" y="118" width="393" height="734"/>
@@ -1156,6 +1244,12 @@
                     <connections>
                         <outlet property="tableView" destination="AdminUser-TV" id="AU-Out-TV"/>
                     </connections>
+=======
+                        <viewLayoutGuide key="safeArea" id="Admin-User-Safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QL User" image="person.3" catalog="system" selectedImage="person.3.fill" id="Admin-Tab-Item-3b"/>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Admin-User-Resp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1198,6 +1292,7 @@
             </objects>
             <point key="canvasLocation" x="5363" y="2575"/>
         </scene>
+<<<<<<< HEAD
         <!--Chat VC-->
         <scene sceneID="chat-vc-scene">
             <objects>
@@ -1375,6 +1470,9 @@
             <point key="canvasLocation" x="6500" y="200"/>
         </scene>
         </scenes>
+=======
+    </scenes>
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
     <resources>
         <image name="building" catalog="system" width="94" height="128"/>
         <image name="building.2" catalog="system" width="120" height="128"/>
@@ -1385,21 +1483,30 @@
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+<<<<<<< HEAD
         <image name="heart.slash" catalog="system" width="128" height="125"/>
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
         <image name="message" catalog="system" width="128" height="106"/>
         <image name="message.fill" catalog="system" width="128" height="104"/>
+<<<<<<< HEAD
         <image name="pencil" catalog="system" width="128" height="113"/>
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.2" catalog="system" width="128" height="87"/>
         <image name="person.3" catalog="system" width="128" height="66"/>
         <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+<<<<<<< HEAD
         <image name="person.fill.xmark" catalog="system" width="128" height="89"/>
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1410,21 +1517,27 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+<<<<<<< HEAD
         <systemColor name="systemGray3Color">
             <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         <systemColor name="systemGray5Color">
             <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+<<<<<<< HEAD
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

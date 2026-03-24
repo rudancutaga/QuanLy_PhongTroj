@@ -1205,9 +1205,12 @@ PODS:
   - Firebase/Firestore (12.11.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 12.11.0)
+<<<<<<< HEAD
   - Firebase/Storage (12.11.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 12.11.0)
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
   - FirebaseAnalytics (12.11.0):
     - FirebaseAnalytics/Default (= 12.11.0)
     - FirebaseCore (~> 12.11.0)
@@ -1271,6 +1274,7 @@ PODS:
     - GoogleUtilities/UserDefaults (~> 8.1)
     - PromisesObjC (~> 2.4)
   - FirebaseSharedSwift (12.11.0)
+<<<<<<< HEAD
   - FirebaseStorage (12.11.0):
     - FirebaseAppCheckInterop (~> 12.11.0)
     - FirebaseAuthInterop (~> 12.11.0)
@@ -1278,6 +1282,8 @@ PODS:
     - FirebaseCoreExtension (~> 12.11.0)
     - GoogleUtilities/Environment (~> 8.1)
     - GTMSessionFetcher/Core (< 6.0, >= 3.4)
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
   - GoogleAdsOnDeviceConversion (3.4.0):
     - GoogleUtilities/Environment (~> 8.1)
     - GoogleUtilities/Logger (~> 8.1)
@@ -1438,7 +1444,10 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+<<<<<<< HEAD
   - Firebase/Storage
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 
 SPEC REPOS:
   trunk:
@@ -1456,7 +1465,10 @@ SPEC REPOS:
     - FirebaseFirestoreInternal
     - FirebaseInstallations
     - FirebaseSharedSwift
+<<<<<<< HEAD
     - FirebaseStorage
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
     - GoogleAdsOnDeviceConversion
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -1483,7 +1495,10 @@ SPEC CHECKSUMS:
   FirebaseFirestoreInternal: 23bd3a69525ae59fb33c27d6b72d310e09f1e65f
   FirebaseInstallations: 3b65e8f4faed02bad1abf5de40e8286c5b13073d
   FirebaseSharedSwift: 3b009645c42263e13d7b320c3543f2938908ebe9
+<<<<<<< HEAD
   FirebaseStorage: b4a8a72ddbf40f721338174ff43e6440189bd677
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
   GoogleAdsOnDeviceConversion: 98956ec5399cff7c0886cf757f4c8ca4716a5064
   GoogleAppMeasurement: 937c97829050e8e83b17724cf873323270b26cb5
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
@@ -1495,6 +1510,10 @@ SPEC CHECKSUMS:
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RecaptchaInterop: 11e0b637842dfb48308d242afc3f448062325aba
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: b1505daf9b4abafaba98506417fe6cb2bc1b5a7b
+=======
+PODFILE CHECKSUM: 1161391356232fb3c975ba2658b5df20700839c6
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 
 COCOAPODS: 1.16.2

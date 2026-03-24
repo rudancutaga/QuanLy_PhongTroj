@@ -19,7 +19,10 @@ class HomeVC: UIViewController {
 
     // Nút "Xem tất cả"
     @IBOutlet weak var xemTatCaButton: UIButton!
+<<<<<<< HEAD
     @IBOutlet weak var searchTextField: UITextField!
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 
     // Tag mapping: Cat1-Btn=0, Cat2-Btn=1, Cat3-Btn=2, Cat4-Btn=3
     private let categories = ["Phòng đơn", "Studio", "Phòng đôi", "Gác lửng"]
@@ -33,9 +36,12 @@ class HomeVC: UIViewController {
             return
         }
         
+<<<<<<< HEAD
         searchTextField?.delegate = self
         searchTextField?.returnKeyType = .search
         
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         // 1. Force bật Interaction cho toàn bộ view cha để chắc chắn không ai cản trở
         sv.isUserInteractionEnabled = true
         sv.delaysContentTouches = false
@@ -120,6 +126,7 @@ class HomeVC: UIViewController {
         }
     }
 }
+<<<<<<< HEAD
 
 extension HomeVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -134,3 +141,5 @@ extension HomeVC: UITextFieldDelegate {
         return true
     }
 }
+=======
+>>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
