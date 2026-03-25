@@ -167,20 +167,10 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-<<<<<<< HEAD
-=======
-			inputPaths = (
-			);
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-<<<<<<< HEAD
-=======
-			outputPaths = (
-			);
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuanLy_PhongTroj/Pods-QuanLy_PhongTroj-frameworks.sh\"\n";

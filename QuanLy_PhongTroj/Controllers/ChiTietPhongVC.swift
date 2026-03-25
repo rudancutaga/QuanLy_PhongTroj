@@ -1,18 +1,12 @@
 import UIKit
 import Foundation
-<<<<<<< HEAD
 import FirebaseFirestore
 import FirebaseAuth
-=======
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 
 class ChiTietPhongVC: UIViewController {
     
     var phong: PhongTro!
-<<<<<<< HEAD
     private var isSaved = false
-=======
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lblTieuDe: UILabel!
@@ -26,7 +20,6 @@ class ChiTietPhongVC: UIViewController {
         super.viewDidLoad()
         title = "Chi tiết phòng"
         
-<<<<<<< HEAD
         // Thêm nút Back giả lập khi Modal
         if navigationController?.viewControllers.first == self {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Đóng", style: .done, target: self, action: #selector(closeModal))
@@ -34,14 +27,11 @@ class ChiTietPhongVC: UIViewController {
         
         setupFavoriteButton()
         
-=======
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         if phong != nil {
             bindData()
         }
     }
     
-<<<<<<< HEAD
     @objc private func closeModal() {
         dismiss(animated: true)
     }
@@ -94,8 +84,6 @@ class ChiTietPhongVC: UIViewController {
         present(alert, animated: true)
     }
     
-=======
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -128,7 +116,6 @@ class ChiTietPhongVC: UIViewController {
     }
     
     @IBAction func btnLienHeTapped(_ sender: Any) {
-<<<<<<< HEAD
         let db = Firestore.firestore()
         let idNguoiDang = phong.idNguoiDang
         
@@ -160,16 +147,6 @@ class ChiTietPhongVC: UIViewController {
             chatVC.room = self.phong
             navigationController?.pushViewController(chatVC, animated: true)
         }
-=======
-        let alert = UIAlertController(title: "Liên Hệ", message: "Số điện thoại chủ nhà đang được ẩn.\nVui lòng gọi: 1900 xxxx", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Gọi ngay", style: .default, handler: { _ in
-            if let url = URL(string: "tel://19000000") {
-                UIApplication.shared.open(url)
-            }
-        }))
-        alert.addAction(UIAlertAction(title: "Đóng", style: .cancel))
-        present(alert, animated: true)
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
     }
     
     private func loadImage(url: URL) {

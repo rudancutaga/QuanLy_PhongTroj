@@ -107,7 +107,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         
         // Tạo conversationId giả định: min(id1, id2) + "_" + max(id1, id2)
         let ids = [currentUserId, room.idNguoiDang].sorted()
-        self.conversationId = "\(ids[0])_\(ids[1])"
+        self.conversationId = "\(ids[0])_\(ids[1])" 
     }
     
     private func setupUI() {

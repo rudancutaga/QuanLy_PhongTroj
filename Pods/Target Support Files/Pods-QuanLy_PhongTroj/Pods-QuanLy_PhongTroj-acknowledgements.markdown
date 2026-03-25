@@ -3223,7 +3223,6 @@ FirestoreEncoder
    limitations under the License.
 
 
-<<<<<<< HEAD
 ## FirebaseStorage
 
 
@@ -3430,8 +3429,6 @@ FirestoreEncoder
    limitations under the License.
 
 
-=======
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
 ## GTMSessionFetcher
 
 

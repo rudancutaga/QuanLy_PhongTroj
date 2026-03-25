@@ -9,46 +9,20 @@ struct UserApp {
 
 class AdminUserVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-<<<<<<< HEAD
     // MARK: - IBOutlet (kết nối từ Storyboard)
     @IBOutlet weak var tableView: UITableView!
     
-=======
-    private let tableView = UITableView()
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
     private var users: [UserApp] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Quản lý Người Dùng"
-<<<<<<< HEAD
         
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UserCell")
         
         loadUsers()
-=======
-        view.backgroundColor = .systemBackground
-        
-        setupTableView()
-        loadUsers()
-    }
-    
-    private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UserCell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
     }
     
     private func loadUsers() {
@@ -91,10 +65,7 @@ class AdminUserVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let user = users[indexPath.row]
-<<<<<<< HEAD
-=======
             // Chặn tính năng Xoá Admin
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
             if user.role != "admin" {
                 let db = Firestore.firestore()
                 db.collection("Users").document(user.id).delete { [weak self] error in

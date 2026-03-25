@@ -69,10 +69,7 @@ class DangKyVC: UIViewController {
 
         // Ẩn bàn phím khi bấm ra ngoài
         let tap = UITapGestureRecognizer(target: self, action: #selector(anBanPhim))
-<<<<<<< HEAD
         tap.cancelsTouchesInView = false // Cho phép bấm xuyên qua View để nhấn nút Đăng Ký
-=======
->>>>>>> a78f26ec288c437ce49f2d46ec28adfe56c268a7
         view.addGestureRecognizer(tap)
     }
 
