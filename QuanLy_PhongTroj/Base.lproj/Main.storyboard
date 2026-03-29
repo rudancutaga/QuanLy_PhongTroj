@@ -718,6 +718,9 @@
                                                         <state key="normal" title="Xem tất cả">
                                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="xemTatCaTapped:" destination="Home-VC-001" eventType="touchUpInside" id="Room-Btn-Act-1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -813,11 +816,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="Home-Nav-Item"/>
                     <connections>
+                        <outlet property="avatarImageView" destination="Img-Avatar" id="Out-Avatar-Img"/>
                         <outlet property="cat1Btn" destination="Cat1-Btn" id="Out-Cat1-Btn"/>
                         <outlet property="cat2Btn" destination="Cat2-Btn" id="Out-Cat2-Btn"/>
                         <outlet property="cat3Btn" destination="Cat3-Btn" id="Out-Cat3-Btn"/>
                         <outlet property="cat4Btn" destination="Cat4-Btn" id="Out-Cat4-Btn"/>
+                        <outlet property="cityLabel" destination="Lbl-City" id="Out-City-Lbl"/>
+                        <outlet property="featuredCardView" destination="Room-Card-1" id="Out-Feature-Card"/>
+                        <outlet property="featuredHeartImageView" destination="RC1-H" id="Out-Feature-Heart"/>
+                        <outlet property="featuredImageContainerView" destination="RC1-Img" id="Out-Feature-ImgWrap"/>
+                        <outlet property="featuredPriceLabel" destination="RC1-Price" id="Out-Feature-Price"/>
+                        <outlet property="featuredPriceSuffixLabel" destination="RC1-Price2" id="Out-Feature-Price2"/>
+                        <outlet property="featuredTitleLabel" destination="RC1-Title" id="Out-Feature-Title"/>
                         <outlet property="scrollView" destination="Home-Scroll" id="Out-Scroll"/>
+                        <outlet property="searchContainerView" destination="Home-Search" id="Out-Search-Container"/>
                         <outlet property="searchTextField" destination="Search-TF" id="Out-Search-TF"/>
                         <outlet property="xemTatCaButton" destination="Room-Btn-1" id="Out-XemTatCa"/>
                         <segue destination="DSP-VC-001" kind="show" identifier="showDanhSachPhong" id="Seg-DSP-001"/>
@@ -1002,6 +1014,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionStackView" destination="Bottom-Stack" id="Out-Action-Stack"/>
+                        <outlet property="chatButton" destination="Btn-Chat" id="Out-Chat-Btn"/>
+                        <outlet property="contactButton" destination="Btn-LienHe" id="Out-Contact-Btn"/>
                         <outlet property="imgView" destination="Img-ChiTiet" id="Out-Img"/>
                         <outlet property="lblDiaChi" destination="Lbl-DiaChi" id="Out-DiaChi"/>
                         <outlet property="lblDienTich" destination="Lbl-DienTich" id="Out-DT"/>

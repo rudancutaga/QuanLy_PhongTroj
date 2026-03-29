@@ -15,7 +15,9 @@ struct PhongTro: Codable, Identifiable {
     var idNguoiDang: String
     
     // Thêm các thuộc tính khác nếu cần sau này (ví dụ: trạng thái phòng)
-    var trangThai: String? // "Đang rảnh", "Đã thuê"
+    var trangThai: String? = nil // "Đang rảnh", "Đã thuê"
+    var nguoiThueId: String? = nil
+    var ngayThue: Date? = nil
     
     // CodingKeys giúp ánh xạ nếu tên biến Swift khác với field trên Firestore
     enum CodingKeys: String, CodingKey {
@@ -31,5 +33,7 @@ struct PhongTro: Codable, Identifiable {
         case ngayDang
         case idNguoiDang
         case trangThai
+        case nguoiThueId
+        case ngayThue
     }
 }

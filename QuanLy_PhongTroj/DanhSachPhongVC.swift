@@ -26,15 +26,20 @@ class PhongCell: UITableViewCell {
     }
 
     func configure(with phong: PhongTro) {
-        lblTen.text = phong.tieuDe
+        let roomStatus = phong.trangThai ?? "Đang rảnh"
+        let isRented = roomStatus == "Đã thuê"
+        lblTen.text = isRented ? "\(phong.tieuDe) • Đã thuê" : phong.tieuDe
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale(identifier: "vi_VN")
         lblGia.text = (formatter.string(from: NSNumber(value: phong.giaThue)) ?? "\(phong.giaThue) ₫").replacingOccurrences(of: "₫", with: "đ")
+        lblThang.text = isRented ? "/đã thuê" : "/tháng"
+        lblGia.textColor = isRented ? .systemGray : UIColor(hex: "#FF6600")
+        lblThang.textColor = isRented ? .systemGray : UIColor.secondaryLabel
         
         lblDiaChi.text = "📍 \(phong.diaChi)"
-        lblDienTich.text = "📐 \(Int(phong.dienTich)) m²  •  \(phong.tienIch.count) tiện ích"
+        lblDienTich.text = "📐 \(Int(phong.dienTich)) m²  •  \(phong.tienIch.count) tiện ích  •  \(roomStatus)"
 
         let color: UIColor
         switch phong.loaiPhong {
@@ -56,6 +61,8 @@ class PhongCell: UITableViewCell {
         }
         imgPlaceholder.backgroundColor = color.withAlphaComponent(0.15)
         iconImgView.tintColor = color
+        heartImgView.tintColor = isRented ? .systemGray3 : UIColor(hex: "#FF6600")
+        cardView.alpha = isRented ? 0.88 : 1
     }
 }
 

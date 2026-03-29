@@ -1,5 +1,22 @@
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
+
+private struct RoomRenterInfo {
+    let userId: String
+    let displayName: String
+    let username: String
+    let phoneNumber: String?
+}
+
+private extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        guard size > 0 else { return [self] }
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0..<Swift.min($0 + size, count)])
+        }
+    }
+}
 
 class AdminPhongVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -9,6 +26,7 @@ class AdminPhongVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet private weak var seedButton: UIButton!
 
     private var rooms: [PhongTro] = []
+    private var renterInfoByUserId: [String: RoomRenterInfo] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,23 +102,33 @@ class AdminPhongVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
 
     private func showRoomActions(for room: PhongTro) {
+        var actions: [AdminSheetAction] = []
+
+        if isRoomRented(room) {
+            actions.append(AdminSheetAction(title: "Xem người thuê") { [weak self] in
+                self?.presentRenterInfo(for: room)
+            })
+        }
+
+        actions.append(contentsOf: [
+            AdminSheetAction(title: "Xem chi tiết phòng") { [weak self] in
+                self?.openRoomDetail(room)
+            },
+            AdminSheetAction(title: "Sửa bài đăng") { [weak self] in
+                self?.presentEditor(for: room)
+            },
+            AdminSheetAction(
+                title: "Xóa bài đăng này",
+                titleColor: AdminPalette.destructive
+            ) { [weak self] in
+                self?.confirmDelete(room)
+            }
+        ])
+
         let sheet = AdminActionSheetController(
             title: "Quản lý bài đăng",
             subtitle: room.tieuDe,
-            actions: [
-                AdminSheetAction(title: "Xem chi tiết phòng") { [weak self] in
-                    self?.openRoomDetail(room)
-                },
-                AdminSheetAction(title: "Sửa bài đăng") { [weak self] in
-                    self?.presentEditor(for: room)
-                },
-                AdminSheetAction(
-                    title: "Xóa bài đăng này",
-                    titleColor: AdminPalette.destructive
-                ) { [weak self] in
-                    self?.confirmDelete(room)
-                }
-            ]
+            actions: actions
         )
         present(sheet, animated: true)
     }
@@ -152,12 +180,107 @@ class AdminPhongVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             guard let self = self else { return }
 
             self.rooms = fetchedRooms ?? []
+            self.loadRenterInfosIfNeeded()
 
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.updateEmptyState()
             }
         }
+    }
+
+    private func loadRenterInfosIfNeeded() {
+        let renterIds = Set(
+            rooms.compactMap { room -> String? in
+                guard isRoomRented(room), let userId = room.nguoiThueId, !userId.isEmpty else { return nil }
+                return userId
+            }
+        )
+
+        guard !renterIds.isEmpty else {
+            renterInfoByUserId = [:]
+            return
+        }
+
+        let userIdChunks = Array(renterIds).chunked(into: 10)
+        let group = DispatchGroup()
+        var renterInfo: [String: RoomRenterInfo] = [:]
+
+        for chunk in userIdChunks {
+            group.enter()
+            Firestore.firestore().collection("Users").whereField(FieldPath.documentID(), in: chunk).getDocuments { snapshot, _ in
+                snapshot?.documents.forEach { document in
+                    let data = document.data()
+                    let username = (data["tenDangNhap"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines)
+                    let fullName = (data["hoTen"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines)
+                    let phone = (data["soDienThoai"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines)
+
+                    renterInfo[document.documentID] = RoomRenterInfo(
+                        userId: document.documentID,
+                        displayName: fullName?.isEmpty == false ? fullName! : (username?.isEmpty == false ? username! : "Người dùng"),
+                        username: username?.isEmpty == false ? username! : "Không rõ",
+                        phoneNumber: phone?.isEmpty == false ? phone : nil
+                    )
+                }
+                group.leave()
+            }
+        }
+
+        group.notify(queue: .main) { [weak self] in
+            self?.renterInfoByUserId = renterInfo
+            self?.tableView.reloadData()
+        }
+    }
+
+    private func isRoomRented(_ room: PhongTro) -> Bool {
+        room.trangThai?.trimmingCharacters(in: .whitespacesAndNewlines) == "Đã thuê"
+    }
+
+    private func presentRenterInfo(for room: PhongTro) {
+        guard isRoomRented(room) else {
+            showAlert(title: "Phòng chưa được thuê", message: "Hiện chưa có người thuê cho phòng này.")
+            return
+        }
+
+        guard let renterId = room.nguoiThueId, !renterId.isEmpty else {
+            showAlert(
+                title: "Chưa có dữ liệu người thuê",
+                message: "Phòng đã được đánh dấu là đã thuê nhưng chưa lưu người thuê cụ thể."
+            )
+            return
+        }
+
+        let renter = renterInfoByUserId[renterId]
+        let rentedDateText = formatRentDate(room.ngayThue)
+        var messageLines = [
+            "Tên hiển thị: \(renter?.displayName ?? "Đang tải...")",
+            "Tên đăng nhập: \(renter?.username ?? renterId)"
+        ]
+
+        if let phoneNumber = renter?.phoneNumber {
+            messageLines.append("Số điện thoại: \(phoneNumber)")
+        }
+
+        if let rentedDateText {
+            messageLines.append("Ngày thuê: \(rentedDateText)")
+        }
+
+        let alert = UIAlertController(
+            title: "Người đang thuê phòng",
+            message: messageLines.joined(separator: "\n"),
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+
+    private func formatRentDate(_ date: Date?) -> String? {
+        guard let date else { return nil }
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "vi_VN")
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
     }
 
     private func updateEmptyState() {
@@ -187,6 +310,15 @@ class AdminPhongVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.heartImgView.image = UIImage(systemName: "heart")
         cell.heartImgView.tintColor = AdminPalette.accent
         cell.selectionStyle = .none
+
+        if isRoomRented(room) {
+            let renterName = room.nguoiThueId.flatMap { renterInfoByUserId[$0]?.displayName } ?? "Chưa xác định"
+            cell.lblDienTich.numberOfLines = 2
+            cell.lblDienTich.text = "📐 \(Int(room.dienTich)) m²  •  \(room.tienIch.count) tiện ích  •  Đã thuê\n👤 Người thuê: \(renterName)"
+        } else {
+            cell.lblDienTich.numberOfLines = 1
+        }
+
         return cell
     }
 
@@ -491,6 +623,8 @@ final class RoomFormViewController: UIViewController {
         let imageURL = imageURLField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let statusText = trangThaiField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let trangThai = (statusText?.isEmpty == false) ? statusText! : "Đang rảnh"
+        let preservedRenterId = trangThai == "Đã thuê" ? room?.nguoiThueId : nil
+        let preservedRentDate = trangThai == "Đã thuê" ? room?.ngayThue : nil
 
         let roomToSave = PhongTro(
             id: room?.id,
@@ -504,7 +638,9 @@ final class RoomFormViewController: UIViewController {
             tienIch: tienIch,
             ngayDang: room?.ngayDang ?? Date(),
             idNguoiDang: room?.idNguoiDang ?? Auth.auth().currentUser?.uid ?? "admin-manual",
-            trangThai: trangThai
+            trangThai: trangThai,
+            nguoiThueId: preservedRenterId,
+            ngayThue: preservedRentDate
         )
 
         navigationItem.rightBarButtonItem?.isEnabled = false

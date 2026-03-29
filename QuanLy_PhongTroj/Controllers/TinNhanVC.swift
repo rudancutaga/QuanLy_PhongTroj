@@ -42,6 +42,8 @@ class TinNhanVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.rowHeight = 76
         tableView.separatorStyle = .none
+        tableView.allowsSelection = true
+        tableView.isUserInteractionEnabled = true
         tableView.register(TinNhanCell.self, forCellReuseIdentifier: "TinNhanCell")
     }
 
@@ -166,11 +168,20 @@ class TinNhanVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let conversation = conversations[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let chatVC = storyboard.instantiateViewController(withIdentifier: "ChatVC") as? ChatVC {
-            chatVC.conversationId = conversation.id
-            chatVC.otherUserId = conversation.otherUserId
-            chatVC.otherUserName = conversation.otherUserName
-            navigationController?.pushViewController(chatVC, animated: true)
+        guard let chatVC = storyboard.instantiateViewController(withIdentifier: "ChatVC") as? ChatVC else {
+            return
+        }
+
+        chatVC.conversationId = conversation.id
+        chatVC.otherUserId = conversation.otherUserId
+        chatVC.otherUserName = conversation.otherUserName
+
+        if let navigationController = navigationController {
+            navigationController.pushViewController(chatVC, animated: true)
+        } else {
+            let modalNavigationController = UINavigationController(rootViewController: chatVC)
+            modalNavigationController.modalPresentationStyle = .fullScreen
+            present(modalNavigationController, animated: true)
         }
     }
 }

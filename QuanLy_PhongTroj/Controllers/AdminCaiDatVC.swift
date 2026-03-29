@@ -16,6 +16,7 @@ class AdminCaiDatVC: UIViewController {
     private let autoLoginDescriptionLabel = UILabel()
     private let autoLoginSwitch = UISwitch()
     private let refreshProfileButton = UIButton(type: .system)
+    private var profileCardHeightConstraint: NSLayoutConstraint?
     private var sessionCardHeightConstraint: NSLayoutConstraint?
 
     override func viewDidLoad() {
@@ -36,12 +37,10 @@ class AdminCaiDatVC: UIViewController {
         view.backgroundColor = AdminPalette.background
         profileCardView.applyAdminCardStyle()
         sessionCardView.applyAdminCardStyle()
-        logoutButton.backgroundColor = AdminPalette.destructive
-        logoutButton.layer.cornerRadius = 24
-        logoutButton.layer.cornerCurve = .continuous
-        logoutButton.setTitleColor(.white, for: .normal)
-        logoutButton.setTitle("Đăng xuất ngay", for: .normal)
-        logoutButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+
+        profileCardHeightConstraint?.isActive = false
+        profileCardHeightConstraint = profileCardView.heightAnchor.constraint(equalToConstant: 126)
+        profileCardHeightConstraint?.isActive = true
 
         roleLabel.text = "Quyền: ADMIN"
         emailLabel.text = "Tài khoản nội bộ"
@@ -108,6 +107,16 @@ class AdminCaiDatVC: UIViewController {
         refreshProfileButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 14, bottom: 10, right: 14)
         refreshProfileButton.addTarget(self, action: #selector(handleRefreshProfile), for: .touchUpInside)
 
+        logoutButton.removeFromSuperview()
+        logoutButton.translatesAutoresizingMaskIntoConstraints = false
+        logoutButton.backgroundColor = AdminPalette.destructive
+        logoutButton.layer.cornerRadius = 20
+        logoutButton.layer.cornerCurve = .continuous
+        logoutButton.setTitleColor(.white, for: .normal)
+        logoutButton.setTitle("Đăng xuất", for: .normal)
+        logoutButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        logoutButton.heightAnchor.constraint(equalToConstant: 52).isActive = true
+
         let headerRow = UIStackView()
         headerRow.translatesAutoresizingMaskIntoConstraints = false
         headerRow.axis = .horizontal
@@ -127,7 +136,8 @@ class AdminCaiDatVC: UIViewController {
             sessionTitleLabel,
             headerRow,
             autoLoginDescriptionLabel,
-            refreshProfileButton
+            refreshProfileButton,
+            logoutButton
         ])
         mainStack.translatesAutoresizingMaskIntoConstraints = false
         mainStack.axis = .vertical
@@ -136,7 +146,7 @@ class AdminCaiDatVC: UIViewController {
         sessionCardView.addSubview(mainStack)
 
         sessionCardHeightConstraint?.isActive = false
-        sessionCardHeightConstraint = sessionCardView.heightAnchor.constraint(greaterThanOrEqualToConstant: 184)
+        sessionCardHeightConstraint = sessionCardView.heightAnchor.constraint(greaterThanOrEqualToConstant: 250)
         sessionCardHeightConstraint?.isActive = true
 
         NSLayoutConstraint.activate([
@@ -188,26 +198,6 @@ class AdminCaiDatVC: UIViewController {
     }
 
     @IBAction func handleLogout(_ sender: UIButton) {
-        let alert = UIAlertController(
-            title: "Đăng xuất",
-            message: "Bạn có chắc muốn rời khỏi khu vực quản trị không?",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "Hủy", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Đăng xuất", style: .destructive) { _ in
-            do {
-                try Auth.auth().signOut()
-                AppNavigator.shared.route(to: .login)
-            } catch {
-                let errorAlert = UIAlertController(
-                    title: "Không thể đăng xuất",
-                    message: error.localizedDescription,
-                    preferredStyle: .alert
-                )
-                errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(errorAlert, animated: true)
-            }
-        })
-        present(alert, animated: true)
+        presentAdminLogoutConfirmation()
     }
 }

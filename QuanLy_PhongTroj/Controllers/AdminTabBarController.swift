@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 enum AdminPalette {
     static let accent = UIColor(hex: "#FF6A00")
@@ -21,6 +22,31 @@ extension UIView {
         layer.shadowOpacity = 0.05
         layer.shadowRadius = 18
         layer.shadowOffset = CGSize(width: 0, height: 8)
+    }
+}
+
+extension UIViewController {
+    func presentAdminLogoutConfirmation(
+        title: String = "Đăng xuất",
+        message: String = "Bạn có chắc muốn rời khỏi khu vực quản trị không?"
+    ) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Hủy", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Đăng xuất", style: .destructive) { [weak self] _ in
+            do {
+                try Auth.auth().signOut()
+                AppNavigator.shared.route(to: .login)
+            } catch {
+                let errorAlert = UIAlertController(
+                    title: "Không thể đăng xuất",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert
+                )
+                errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
+                self?.present(errorAlert, animated: true)
+            }
+        })
+        present(alert, animated: true)
     }
 }
 
